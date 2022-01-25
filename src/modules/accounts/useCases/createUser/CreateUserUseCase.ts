@@ -10,17 +10,10 @@ class CreateUserUseCase {
     private usersRepository: IUsersRepository
   ) {}
 
-  async execute({
-    name,
-    email,
-    username,
-    password,
-    driver_license,
-  }: ICreateUserDTO) {
+  async execute({ name, email, password, driver_license }: ICreateUserDTO) {
     await this.usersRepository.create({
       name,
       email,
-      username,
       password,
       driver_license,
     });
