@@ -8,7 +8,7 @@ import createConnection from "@shared/infra/typeorm";
 import { AppError } from "@shared/errors/AppError";
 
 import swaggerFile from "../../../swagger.json";
-import { router } from "../routes";
+import { router } from "./routes";
 
 createConnection()
 const app = express();
