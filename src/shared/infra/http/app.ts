@@ -24,12 +24,13 @@ app.use(
         message: err.message,
       });
     }
-
     return response.status(500).json({
       status: "error",
-      message: `Internal Server Error - ${err.message}`,
+      message: `Internal server error - ${err.message}`,
     });
   }
 );
+
+
 
 export { app }
